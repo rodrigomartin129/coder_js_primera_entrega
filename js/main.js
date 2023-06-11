@@ -2,6 +2,9 @@
 
 // Se solicita datos de la persona a quien se dirige la factura.
 let nombre_completo = prompt("Ingrese el nombre del cliente.");
+while (!nombre_completo) {
+    nombre_completo = prompt(`Nombre incorrecto. Por favor, reingrese el nombre.`);
+}
 let condicion_iva = prompt("Ingrese condición del cliente (CF:Consumidor Final / RI:Responsable Inscripto / M:Monotributista / E:Exento).");
 // Se chequea que la condición se ingrese correctamente.
 while (!((condicion_iva == "CF") || (condicion_iva == "RI") || (condicion_iva == "M") || (condicion_iva == "E"))) {
